@@ -46,11 +46,6 @@ MyBlogApp/
    dotnet restore
    ```
 
-3. Update the database (if using Entity Framework):
-   ```sh
-   dotnet ef database update
-   ```
-
 ### Running the Application
 
 1. Build the solution:
