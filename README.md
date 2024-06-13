@@ -58,6 +58,46 @@ MyBlogApp/
    dotnet run --project MyBlogApp.API
    ```
 
+### Docker Setup
+
+#### Building the Docker Image
+
+A Dockerfile is included in the project to facilitate containerization. To build the Docker image, follow these steps:
+
+1. Navigate to the root directory of the project where the Dockerfile is located.
+2. Build the Docker image using the following command:
+   ```sh
+   docker build -t myblogapp .
+   ```
+
+#### Running the Docker Container
+
+Once the image is built, you can run the Docker container using the following command:
+```sh
+docker run -d -p 8080:80 --name myblogapp-container myblogapp
+```
+
+- `-d` runs the container in detached mode.
+- `-p 8080:80` maps port 80 in the container to port 8080 on your host machine.
+- `--name myblogapp-container` assigns a name to the running container.
+- `myblogapp` is the name of the Docker image you built.
+
+#### Accessing the Application
+
+After running the container, the application will be accessible at `http://localhost:8080`.
+
+#### Stopping and Removing the Docker Container
+
+To stop the running container:
+```sh
+docker stop myblogapp-container
+```
+
+To remove the container:
+```sh
+docker rm myblogapp-container
+```
+
 ## Architecture
 
 The application follows Clean Architecture principles, which include:
@@ -131,3 +171,7 @@ To run the unit tests:
 ```sh
 dotnet test
 ```
+
+
+
+
