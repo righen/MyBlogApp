@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <ItemGroup>
+        <ProjectReference Include="..\MyBlogApp.Domain\MyBlogApp.Domain.csproj"/>
+        <ProjectReference Include="..\MyBlogApp.Application\MyBlogApp.Application.csproj"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.6"/>
+        <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.6"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Remove="Data\"/>
+        <None Remove="Repositories\"/>
+    </ItemGroup>
+    <ItemGroup>
+        <Folder Include="Data\"/>
+        <Folder Include="Repositories\"/>
+    </ItemGroup>
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+</Project>

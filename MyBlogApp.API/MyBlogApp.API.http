@@ -1,0 +1,37 @@
+# Get a specific post by ID
+GET http://localhost:5209/api/posts/1
+Accept: application/json
+
+###
+
+# Get all posts
+GET http://localhost:5209/api/posts
+Accept: application/json
+
+###
+
+# Create a new post
+POST http://localhost:5209/api/posts
+Content-Type: application/json
+
+{
+  "title": "New Post Title",
+  "content": "This is the content of the new post."
+}
+
+###
+
+# Update a post by ID
+PUT http://localhost:5209/api/posts/1
+Content-Type: application/json
+
+{
+  "title": "Updated Post Title",
+  "content": "This is the updated content of the post."
+}
+
+###
+
+# Delete a post by ID
+DELETE http://localhost:5209/api/posts/1
+
